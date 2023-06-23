@@ -1,0 +1,135 @@
+/* Barra de rolagem */
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: gray;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4c4c9c;
+  border-radius: 20px;
+  border: 3px solid #4c4c9c;
+}
+
+/* Menu Navbar */
+
+.navbar .navbar-nav .nav-link.active {
+  color: greenyellow;
+}
+
+.navbar-toggler>.close {
+  display: inline;
+}
+
+.navbar-toggler.collapsed>.close,
+.navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+  display: none;
+}
+
+.logo {
+  font-size: 25px !important;
+}
+
+.logo i {
+  margin-left: 10px !important;
+}
+
+.button-links {
+  border: 1px solid #fff !important;
+  border-radius: 5px !important;
+  margin: 8px !important;
+  text-align: center !important;
+}
+
+.button-links:hover {
+  background-color: #646464
+}
+
+
+@media (max-width:990px) {
+  .logo {
+    font-size: 20px !important;
+  }
+}
+
+/* Seção Geral */
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #333;
+}
+
+/* Seção Início */
+
+#home {
+  color: #fff;
+  margin-top: 55px;
+}
+
+.container {
+  width: 100%;
+  color: #fff;
+}
+
+.container img {
+  width: 230px;
+  height: 230px;
+  border-radius: 20%;
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 400px) {
+
+  .container h1 {
+    font-size: 20px;
+  }
+
+  .container p {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-height: 430px) {
+
+  #home {
+    padding: 50px;
+  }
+
+}
+
+
+.jumbotron {
+  margin-bottom: 0px;
+}
+
+.icons-contact-home i {
+  color: #fff;
+
+}
+
+.icons-contact-home i:hover {
+  font-size: 35px;
+  color: skyblue;
+}
+
+/* Rodapé */
+
+.icons-contact-footer a {
+  font-size: 25px;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+}
