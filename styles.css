@@ -16,8 +16,12 @@ body::-webkit-scrollbar-thumb {
 
 /* Menu Navbar */
 
+.navbar {
+  background-color: #161618;
+}
+
 .navbar .navbar-nav .nav-link.active {
-  color: greenyellow;
+  color: #25afe6;
 }
 
 .navbar-toggler>.close {
@@ -48,15 +52,6 @@ body::-webkit-scrollbar-thumb {
   background-color: #646464
 }
 
-
-@media (max-width:990px) {
-  .logo {
-    font-size: 20px !important;
-  }
-}
-
-/* Seção Geral */
-
 section {
   min-height: 100vh;
   display: flex;
@@ -68,21 +63,19 @@ section {
 
 /* Seção Início */
 
-#home {
-  color: #fff;
-  margin-top: 55px;
-}
-
 .container {
   width: 100%;
   color: #fff;
 }
 
 .container img {
+  margin-top: 80px;
   width: 230px;
   height: 230px;
   border-radius: 20%;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 5px #5d6b6e;
+  text-align: center;
 }
 
 
@@ -113,12 +106,44 @@ section {
 
 .icons-contact-home i {
   color: #fff;
+  padding: 5px;
+  transition: transform 0.3s ease-out;
 
 }
 
 .icons-contact-home i:hover {
-  font-size: 35px;
+  transform: scale(1.2);
   color: skyblue;
+}
+
+/* Contato */
+
+#contact {
+  background-color: #8788c5;
+  min-height: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.icons-contact-contact i {
+  color: #fff;
+  font-size: 40px;
+  padding: 5px;
+  transition: transform 0.3s ease-out;
+
+}
+
+.icons-contact-contact i:hover {
+  transform: scale(1.2);
+  color: #161618;
+
 }
 
 /* Rodapé */
@@ -131,5 +156,6 @@ section {
 }
 
 footer {
+  background-color: #161618;
   text-align: center;
 }
