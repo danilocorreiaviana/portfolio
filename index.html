@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark border-bottom border-light">
     <div class="container">
       <a class="navbar-brand logo" href="#home" onclick="changeActiveLink(event)">Danilo Correia <i
           class="fa fa-desktop" aria-hidden="true"></i></a>
@@ -45,114 +45,83 @@
     </div>
   </nav>
 
-  <section id="home" class="bg-dark text-center" >
-    <div class="container">
-      <img src="/assets/profile.png" alt="Foto de apresentação do portfólio">
-      <h1 class="jumbotron-heading"> Olá! Eu sou, Danilo Correia </h1>
-      <p class="lead">Desenvolvedor Front-End
-      </p>
-      <div class="icons-contact-home">
-        <a href="https://github.com/danilocorreiaviana" target="_blank"> <i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/danilo-correia-viana-3118a921a/" target="_blank"> <i
-            class="fab fa-linkedin"></i></a>
+  <main>
+    <section id="home" class="bg-dark text-center">
+      <div class="container">
+        <img src="./assets/profile.png" alt="Foto de apresentação do portfólio">
+        <h1 class="jumbotron-heading"> Olá! Eu sou, Danilo Correia </h1>
+        <p class="lead">Desenvolvedor Front-End
+        </p>
+        <div class="icons-contact-home">
+          <a href="https://github.com/danilocorreiaviana" target="_blank"> <i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/danilo-correia-viana-3118a921a/" target="_blank"> <i
+              class="fab fa-linkedin"></i></a>
+          <a href="mailto:danilocorreiaviana14@gmail.com" target="_blank"> <i class="fa fa-envelope"></i></a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about" style="background-color: #686ad3;">
-    <div>
-      <h1>Formação</h1>
-    </div>
-  </section>
+    <section id="about" style="background-color: #8788c5;">
+      <div>
+        <h1>Formação</h1>
+      </div>
+    </section>
 
-  <section id="acting" class="bg-dark" style="color: #fff;">
-    <div>
-      <h1>Atuação</h1>
-    </div>
-  </section>
+    <section id="acting" class="bg-dark" style="color: #fff;">
+      <div>
+        <h1>Atuação</h1>
+      </div>
+    </section>
 
-  <section id="contact" style="background-color:  #686ad3;">
-    <div>
-      <h1>Contato</h1>
-    </div>
-  </section>
+    <section id="contact">
 
-  <section id="projects" class="bg-dark" style="color: #fff;">
-    <div>
-      <h1>Projetos</h1>
-    </div>
-  </section>
+      <div class="container">
+        <div class="text-center" style="padding-bottom: 30px;">
+          <h1 class="display">Contato</h1>
+        </div>
+        <div class="icons-contact-contact text-center">
+          <a href="https://github.com/danilocorreiaviana" target="_blank"> <i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/danilo-correia-viana-3118a921a/" target="_blank"> <i
+              class="fab fa-linkedin"></i></a>
+          <a href="mailto:danilocorreiaviana14@gmail.com" target="_blank"> <i class="fa fa-envelope"></i></a>
+          <a href="https://wa.me/5588988183118" target="_blank"> <i class="fa fa-whatsapp"></i></a>
+        </div>
 
-  <script>
-    // Definindo os elementos e seus IDs correspondentes
-    const sectionHome = document.getElementById('home');
-    const sectionAbout = document.getElementById('about');
-    const sectionActing = document.getElementById('acting');
-    const sectionContact = document.getElementById('contact');
-    const sectionProjects = document.getElementById('projects');
+        <form >
+          <div class="form-group">
+            <label class="lead" for="nome" class="col-form-label text-left">Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome"
+              style="background-color: #dfd5d5;">
+          </div>
+          <div class="form-group">
+            <label class="lead" for="email" class="col-form-label text-left">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Digite seu email"
+              style="background-color: #dfd5d5;">
+          </div>
+          <div class="form-group">
+            <label class="lead" for="mensagem" class="col-form-label text-left">Mensagem:</label>
+            <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua mensagem"
+              style="background-color: #dfd5d5;"></textarea>
+          </div>
+          <div class="text-center" style="margin-top: 30px;">
+            <button type="submit" class="btn btn-dark" style="width: 100px;">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
-    // Função para verificar a posição da rolagem
-    function onScroll() {
-      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
-      // Verificando a posição da rolagem e definindo o ID do elemento ativo (destacar o link correspondente))
 
-      let activeId = '';
-      if (scrollPosition < sectionAbout.offsetTop) {
-        activeId = 'home';
-      } else if (scrollPosition < sectionActing.offsetTop) {
-        activeId = 'about';
-      } else if (scrollPosition < sectionContact.offsetTop) {
-        activeId = 'acting';
-      } else if (scrollPosition < sectionProjects.offsetTop) {
-        activeId = 'contact';
-      } else {
-        activeId = 'projects';
-      }
+    <section id="projects" class="bg-dark" style="color: #fff;">
+      <div>
+        <h1>Projetos</h1>
+      </div>
+    </section>
+  </main>
 
-      var sections = document.querySelectorAll('section');
-      var currentSection = '';
+  <script src="script.js"></script>
 
-      sections.forEach(function (section) {
-        var sectionTop = section.offsetTop;
-        var sectionHeight = section.clientHeight;
-
-        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-          currentSection = section.getAttribute('id');
-        }
-      });
-
-      var links = document.querySelectorAll('.navbar .navbar-nav .nav-link');
-      links.forEach(function (link) {
-        link.classList.remove('active');
-        var href = link.getAttribute('href').substring(1);
-        if (href === currentSection) {
-          link.classList.add('active');
-        }
-      });
-
-    }
-
-    // Escutando o evento de rolagem e chamando a função onScroll
-    window.addEventListener('scroll', onScroll);
-
-    function changeActiveLink(event) {
-      // Removendo a classe 'active' de todos os links
-      var links = document.querySelectorAll('.navbar .navbar-nav .nav-link .navbar-brand logo');
-      links.forEach(function (link) {
-        link.classList.remove('active');
-      }
-
-      );
-
-      // Adicionando a classe 'active' ao link clicado (Destaque do link)
-      var clickedLink = event.target;
-      clickedLink.classList.add('active');
-    }
-
-  </script>
-
-  <footer class="footer mt-auto py-3" style="background-color: #474444;">
+  <footer class="footer mt-auto py-3">
     <div class="container">
       <span class="text-light">Portfólio - Danilo Correia &copy; 2023.</span>
       <div class="icons-contact-footer">
