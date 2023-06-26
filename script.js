@@ -140,5 +140,3 @@ function handleSwipe(event) {
         }
     }
 }
-
-startSlider();
