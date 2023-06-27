@@ -3,7 +3,11 @@
   padding: 0;
 }
 
-/* Barra de rolagem */
+html {
+  scroll-behavior: smooth;
+}
+
+/* BARRA DE ROLAGEM */
 
 body::-webkit-scrollbar {
   width: 12px;
@@ -19,7 +23,7 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #4c4c9c;
 }
 
-/* Menu Navbar */
+/* MENU NAVBAR */
 
 .navbar {
   background-color: #161618;
@@ -57,7 +61,14 @@ body::-webkit-scrollbar-thumb {
   background-color: #646464
 }
 
-/* Global */
+@media (max-width: 280px) {
+
+  .logo {
+    font-size: 20px !important;
+  }
+}
+
+/* GLOBAL */
 
 .container {
   width: 100%;
@@ -65,7 +76,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 section {
-  /* min-height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,11 +83,10 @@ section {
   color: #333;
 }
 
-/* Seção Início */
+/* INÍCIO */
 
 #home {
   min-height: auto;
-  /* min-height: 100vh; */
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -91,7 +100,6 @@ section {
   box-shadow: 5px 5px 5px #5d6b6e;
   text-align: center;
 }
-
 
 @media (max-width: 400px) {
 
@@ -113,7 +121,6 @@ section {
 
 }
 
-
 .jumbotron {
   margin-bottom: 0px;
 }
@@ -130,12 +137,11 @@ section {
   color: skyblue;
 }
 
-/* Formação */
+/* FORMAÇÃO */
 
 #about {
   background-color: #8788c5;
   min-height: auto;
-  /* min-height: 100vh; */
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -150,7 +156,6 @@ section {
   padding-bottom: 60px;
 }
 
-/* Estilos do slider */
 .slider {
   display: flex;
   transition: transform 0.3s ease-in-out;
@@ -175,12 +180,10 @@ section {
   border-radius: 50%;
 }
 
-/* Estilos do texto e imagem */
 .slide-text {
   margin-right: 20px;
 }
 
-/* Estilos da navegação */
 .slider-nav {
   position: absolute;
   bottom: 10px;
@@ -231,7 +234,6 @@ section {
   margin-left: 10px;
 }
 
-/* Media queries */
 @media screen and (max-width: 576px) {
   .slide-content {
     padding: 10px;
@@ -246,23 +248,107 @@ section {
   }
 }
 
-/* Atuação */
+@media (max-width: 280px) {
+
+  .slider-container {
+    padding-bottom: 50px;
+  }
+
+  .slide img {
+    margin-top: 20px;
+    max-width: 180px;
+    max-height: 180px;
+    border-radius: 50%;
+  }
+}
+
+/* ATUAÇÃO */
 
 #acting {
   min-height: auto;
-  /* min-height: 100vh; */
+  background-color: #383838;
   padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   color: #fff;
 }
 
-/* Contato */
+#acting .container {
+  max-width: 900px;
+}
+
+#acting .jumbotron-heading h5 {
+  color: skyblue;
+}
+
+#acting .lead {
+  margin-top: 10px;
+  text-align: justify;
+  padding: 30px;
+}
+
+#logoUfca {
+  height: 300px;
+  transition: transform 0.3s ease-out;
+
+}
+
+#logoUfca:hover {
+  transform: scale(1.1);
+}
+
+#logoJava {
+  height: 100px;
+  margin-left: 20px;
+  transition: transform 0.3s ease-out;
+
+}
+
+#logoJava:hover {
+  transform: scale(1.1);
+}
+
+#logoEclipse {
+  height: 80px;
+  transition: transform 0.3s ease-out;
+
+}
+
+#logoEclipse:hover {
+  transform: scale(1.1);
+}
+
+.techs {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  #acting .jumbotron-heading {
+    font-size: 1.5rem;
+  }
+
+  #acting .lead {
+    font-size: 16px;
+  }
+}
+
+/* CONTATO */
 
 #contact {
   background-color: #8788c5;
   min-height: auto;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.text-center h1 {
+  margin-bottom: 30px;
+}
+
+.text-center button {
+  margin-top: 30px;
 }
 
 form {
@@ -286,17 +372,16 @@ form {
 
 }
 
-/* Projetos */
+/* PROJETOS */
 
 #projects {
   min-height: auto;
-  /* min-height: 100vh; */
   padding-top: 100px;
   padding-bottom: 100px;
   color: #fff;
 }
 
-/* Rodapé */
+/* RODAPÉ */
 
 .icons-contact-footer a {
   font-size: 25px;
