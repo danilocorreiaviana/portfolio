@@ -234,6 +234,35 @@ section {
   margin-left: 10px;
 }
 
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media screen and (max-width: 991px) {
+
+  .prev,
+  .next {
+    display: none;
+  }
+}
+
+
 @media screen and (max-width: 576px) {
   .slide-content {
     padding: 10px;
@@ -268,7 +297,6 @@ section {
   min-height: auto;
   background-color: #383838;
   padding-top: 100px;
-  /* padding-bottom: 100px; */
   color: #fff;
 }
 
@@ -286,7 +314,7 @@ section {
   padding: 30px;
 }
 
-#logoUfca {
+/* #logoUfca {
   height: 300px;
   transition: transform 0.3s ease-out;
 
@@ -294,6 +322,27 @@ section {
 
 #logoUfca:hover {
   transform: scale(1.1);
+} */
+
+#brasao {
+  width: 200px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-out;
+
+}
+
+#brasao:hover {
+  transform: scale(1.1);
+}
+
+#logoUfca {
+  height: 250px;
+
+}
+
+#logoUfca2 {
+  width: 200px;
+
 }
 
 #logoJava {
