@@ -174,10 +174,10 @@ section {
 }
 
 .slide img {
-  margin-top: 20px;
   max-width: 250px;
   max-height: 250px;
   border-radius: 50%;
+  padding: 18px;
 }
 
 .slide-text {
@@ -223,7 +223,6 @@ section {
 
 .slide-text h3 {
   color: #fff;
-  margin-bottom: 20px;
 }
 
 .slide-text p {
