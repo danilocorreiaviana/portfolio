@@ -314,16 +314,6 @@ section {
   padding: 30px;
 }
 
-/* #logoUfca {
-  height: 300px;
-  transition: transform 0.3s ease-out;
-
-}
-
-#logoUfca:hover {
-  transform: scale(1.1);
-} */
-
 #brasao {
   width: 200px;
   margin: 0 auto;
@@ -428,6 +418,62 @@ form {
   padding-top: 100px;
   padding-bottom: 100px;
   color: #fff;
+}
+
+.card {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-out;
+}
+
+.card-body {
+  background-color: aliceblue;
+  border-radius: 15px;
+}
+
+.custom-card {
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-text-smaller {
+  font-size: 14px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.techlinks li {
+  color: #44b8e6;
+  margin: 5px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #347f9c;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.button i {
+  color: #fff;
+  font-size: 24px;
 }
 
 /* RODAPÉ */
