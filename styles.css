@@ -7,6 +7,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 /* BARRA DE ROLAGEM */
 
 body::-webkit-scrollbar {
@@ -27,10 +34,6 @@ body::-webkit-scrollbar-thumb {
 
 .navbar {
   background-color: #161618;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }
 
 .navbar .navbar-nav .nav-link.active {

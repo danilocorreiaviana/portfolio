@@ -152,11 +152,11 @@ links.forEach(link => {
 
         // Verificando o ID do conteúdo e atualizando o título e o conteúdo do modal
         if (contentId === '1') {
-            document.getElementById('modalImage').src = "./images/react_logo.png"
+            document.getElementById('modalImage').src = "./assets/images/logos/react_logo.png"
             document.getElementById('modalTitle').innerText = 'React JS';
             document.getElementById('modalContent').innerText = 'Sobre o React JS...';
         } else if (contentId === '2') {
-            document.getElementById('modalImage').src = "./images/css_logo.png"
+            document.getElementById('modalImage').src = "./assets/images/logos/css_logo.png"
             document.getElementById('modalTitle').innerText = 'CSS3';
             document.getElementById('modalContent').innerText = 'Sobre o CSS...';
         }
