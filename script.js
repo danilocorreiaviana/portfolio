@@ -140,3 +140,26 @@ function handleSwipe(event) {
         }
     }
 }
+
+const links = document.querySelectorAll('.techlinks a');
+
+// Adicionando um ouvinte de evento de clique a cada link
+links.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const contentId = link.getAttribute('data-content-id');
+
+        // Verificando o ID do conteúdo e atualizando o título e o conteúdo do modal
+        if (contentId === '1') {
+            document.getElementById('modalImage').src = "./images/react_logo.png"
+            document.getElementById('modalTitle').innerText = 'React JS';
+            document.getElementById('modalContent').innerText = 'Sobre o React JS...';
+        } else if (contentId === '2') {
+            document.getElementById('modalImage').src = "./images/css_logo.png"
+            document.getElementById('modalTitle').innerText = 'CSS3';
+            document.getElementById('modalContent').innerText = 'Sobre o CSS...';
+        }
+
+    });
+});
