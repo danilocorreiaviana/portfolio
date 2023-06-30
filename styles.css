@@ -27,6 +27,10 @@ body::-webkit-scrollbar-thumb {
 
 .navbar {
   background-color: #161618;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .navbar .navbar-nav .nav-link.active {
@@ -81,6 +85,10 @@ section {
   justify-content: center;
   font-size: 30px;
   color: #333;
+}
+
+.text-center h1 {
+  margin-bottom: 30px;
 }
 
 /* INÍCIO */
@@ -144,6 +152,10 @@ section {
   min-height: auto;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.em_title{
+  margin-top: 12px;
 }
 
 .slider-container {
@@ -381,10 +393,6 @@ section {
   padding-bottom: 100px;
 }
 
-.text-center h1 {
-  margin-bottom: 30px;
-}
-
 .text-center button {
   margin-top: 30px;
 }
@@ -394,6 +402,14 @@ form {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.form-group input {
+  background-color: #dfd5d5;
+}
+
+form .text-center button {
+  width: 100px;
 }
 
 .icons-contact-contact i {
@@ -417,6 +433,10 @@ form {
   padding-top: 100px;
   padding-bottom: 100px;
   color: #fff;
+}
+
+#projects .container .text-center h1 {
+  margin-bottom: 60px;
 }
 
 .card {
@@ -473,6 +493,13 @@ form {
 .button i {
   color: #fff;
   font-size: 24px;
+}
+
+/* MODAL */
+
+#modalImage {
+  width: 30px;
+  margin-left: 5px;
 }
 
 /* RODAPÉ */
