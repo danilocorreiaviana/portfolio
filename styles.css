@@ -154,7 +154,7 @@ section {
   padding-bottom: 100px;
 }
 
-.em_title{
+.em_title {
   margin-top: 12px;
 }
 
@@ -384,47 +384,6 @@ section {
   }
 }
 
-/* CONTATO */
-
-#contact {
-  background-color: #8788c5;
-  min-height: auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.text-center button {
-  margin-top: 30px;
-}
-
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.form-group input {
-  background-color: #dfd5d5;
-}
-
-form .text-center button {
-  width: 100px;
-}
-
-.icons-contact-contact i {
-  color: #fff;
-  font-size: 40px;
-  padding: 5px;
-  transition: transform 0.3s ease-out;
-
-}
-
-.icons-contact-contact i:hover {
-  transform: scale(1.2);
-  color: #161618;
-
-}
 
 /* PROJETOS */
 
@@ -433,6 +392,7 @@ form .text-center button {
   padding-top: 100px;
   padding-bottom: 100px;
   color: #fff;
+  background-color: #8788c5;
 }
 
 #projects .container .text-center h1 {
@@ -442,11 +402,12 @@ form .text-center button {
 .card {
   margin: 0 auto;
   margin-bottom: 20px;
+  padding: 5px;
   transition: transform 0.3s ease-out;
 }
 
 .card-body {
-  background-color: aliceblue;
+  background-color: #f0f8ff;
   border-radius: 15px;
 }
 
@@ -494,6 +455,62 @@ form .text-center button {
   color: #fff;
   font-size: 24px;
 }
+
+/* CONTATO */
+
+#contact {
+  min-height: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form-group input {
+  background-color: #dfd5d5;
+}
+
+.form-group input:focus {
+  background-color: #dfd5d5;
+}
+
+.form-group textarea {
+  background-color: #dfd5d5;
+}
+
+.form-group textarea:focus {
+  background-color: #dfd5d5;
+}
+
+form .text-center button {
+  width: 150px;
+  margin-top: 30px;
+  color: #fff;
+  background-color: #6366c5;
+}
+
+form .text-center button:hover {
+  background-color: #8385c5;
+}
+
+.icons-contact-contact i {
+  color: #fff;
+  font-size: 40px;
+  padding: 5px;
+  transition: transform 0.3s ease-out;
+
+}
+
+.icons-contact-contact i:hover {
+  transform: scale(1.2);
+  color: #8385c5;
+}
+
 
 /* MODAL */
 
