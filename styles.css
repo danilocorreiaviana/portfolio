@@ -522,6 +522,20 @@ form .text-center button:hover {
   margin-left: 5px;
 }
 
+#myModal::-webkit-scrollbar {
+  width: 12px;
+}
+
+#myModal::-webkit-scrollbar-track {
+  background: gray;
+}
+
+#myModal::-webkit-scrollbar-thumb {
+  background-color: #4c4c9c;
+  border-radius: 20px;
+  border: 3px solid #4c4c9c;
+}
+
 /* RODAPÉ */
 
 .icons-contact-footer a {
