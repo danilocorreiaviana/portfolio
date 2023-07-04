@@ -15,7 +15,7 @@ Este projeto foi desenvolvido usando as seguintes tecnologias:
 
 ## 🟢 Live
 
-[GitHub_Pages](https://danilocorreiaviana.github.io/portfolio/)
+Acesse o projeto no GitHub Pages através deste link: [Portfolio](https://danilocorreiaviana.github.io/portfolio/)
 
 ## 👨‍💻 Autor
 
