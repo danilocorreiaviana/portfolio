@@ -170,13 +170,13 @@ const limitations = `
 `;
 
 const projects = `
-    <div style="display: flex; justify-content: center; ">
-    <img title="facebook" alt="facebook" src='./assets/images/logos/facebook_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="airbnb" alt="airbnb" src='./assets/images/logos/airbnb_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="netflix" alt="netflix" src='./assets/images/logos/netflix_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="whatsapp" alt="whatsapp" src='./assets/images/logos/whatsapp_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="microsoft" alt="microsoft" src='./assets/images/logos/microsoft_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="dropbox" alt="dropbox" src='./assets/images/logos/dropbox_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
+    <div class='modal_projects'>
+    <img title="facebook" alt="facebook" src='./assets/images/logos/facebook_logo.png'>
+    <img title="airbnb" alt="airbnb" src='./assets/images/logos/airbnb_logo.png'>
+    <img title="netflix" alt="netflix" src='./assets/images/logos/netflix_logo.png'>
+    <img title="whatsapp" alt="whatsapp" src='./assets/images/logos/whatsapp_logo.png'>
+    <img title="microsoft" alt="microsoft" src='./assets/images/logos/microsoft_logo.png'>
+    <img title="dropbox" alt="dropbox" src='./assets/images/logos/dropbox_logo.png'>
     </div>
 `;
 
@@ -211,13 +211,13 @@ const limitations2 = `
 `;
 
 const projects2 = `
-    <div style="display: flex; justify-content: center; ">
-    <img title="apple" alt="apple" src='./assets/images/logos/apple_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="google" alt="google" src='./assets/images/logos/google_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="amazon" alt="amazon" src='./assets/images/logos/amazon_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="microsoft" alt="microsoft" src='./assets/images/logos/microsoft_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="adobe" alt="adobe" src='./assets/images/logos/adobe_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
-    <img title="airbnb" alt="airbnb" src='./assets/images/logos/airbnb_logo.png' style="width: 50px; height: 50px; margin-right: 10px;">
+    <div class="modal_projects">
+    <img title="apple" alt="apple" src='./assets/images/logos/apple_logo.png'>
+    <img title="google" alt="google" src='./assets/images/logos/google_logo.png'>
+    <img title="amazon" alt="amazon" src='./assets/images/logos/amazon_logo.png'>
+    <img title="microsoft" alt="microsoft" src='./assets/images/logos/microsoft_logo.png'>
+    <img title="adobe" alt="adobe" src='./assets/images/logos/adobe_logo.png'>
+    <img title="airbnb" alt="airbnb" src='./assets/images/logos/airbnb_logo.png'>
     </div>
 `;
 

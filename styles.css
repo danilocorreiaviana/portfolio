@@ -547,6 +547,39 @@ form .text-center button:hover {
   border: 3px solid #4c4c9c;
 }
 
+.modal_projects {
+  display: flex;
+  justify-content: center;
+}
+
+.modal_projects img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+@media (max-width:410px) {
+  .modal_projects img {
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+@media (max-width:345px) {
+  .modal_projects img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width:290px) {
+  .modal_projects img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 /* RODAPÉ */
 
 .icons-contact-footer a {
