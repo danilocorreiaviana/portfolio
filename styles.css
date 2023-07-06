@@ -533,6 +533,30 @@ form .text-center button:hover {
   margin-left: 5px;
 }
 
+#myModal .modal-header {
+  color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+}
+
+#myModal .modal-header .btn-close {
+  background-color: #924545;
+}
+
+#myModal .modal-body {
+  background-color: #c3d9e2;
+}
+
+#myModal .modal-footer {
+  color: #fff
+}
+
+#myModal .modal-footer button {
+  background-color: #924545;
+  color: #fff
+}
+
 #myModal::-webkit-scrollbar {
   width: 12px;
 }
