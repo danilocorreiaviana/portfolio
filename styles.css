@@ -94,45 +94,6 @@ section {
   margin-bottom: 30px;
 }
 
-.floating-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #a7aca7;
-  color: black;
-  border: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  text-decoration: none;
-  opacity: 0.6;
-}
-
-.floating-button i {
-  margin-top: 3px;
-}
-
-.message-count {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: red;
-  color: #fff;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* INÍCIO */
 
 #home {
@@ -564,12 +525,105 @@ form .text-center button:hover {
   color: #8385c5;
 }
 
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #a7aca7;
+  color: black;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.floating-button i {
+  margin-top: 3px;
+}
+
+.message-count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#success-modal .modal-header {
+  background-color: #4CAF50;
+  color: #fff;
+  border-bottom: none;
+}
+
+#success-modal .modal-title {
+  font-weight: bold;
+}
+
+#success-modal .modal-body {
+  padding: 20px;
+  text-align: center;
+}
+
+#success-modal .modal-dialog {
+  max-width: 400px;
+}
+
+.success-text {
+  font-size: 16px;
+  color: #000;
+}
+
+/* Estilo para o botão de fechar o modal */
+.btn-close {
+  font-size: 15px;
+}
+
 
 /* MODAL */
 
 #modalImage {
   width: 30px;
   margin-left: 5px;
+}
+
+#myModal .modal-header{
+  color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none; 
+}
+
+#myModal .modal-header .btn-close{
+  background-color: #924545;
+}
+
+#myModal .modal-body{
+  background-color: #c3d9e2;
+}
+
+#myModal .modal-footer{
+  background-color: #333;
+  color: #fff
+}
+
+#myModal .modal-footer button{
+  background-color: #924545;
+  color: #fff
 }
 
 #myModal::-webkit-scrollbar {
