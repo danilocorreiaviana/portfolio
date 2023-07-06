@@ -283,3 +283,20 @@ links.forEach(link => {
 
     });
 });
+
+//Mensagens
+
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    var formData = { name, email, message };
+    console.log(formData)
+
+    document.getElementById('contact-form').reset();
+    $('#success-modal').modal('show');
+
+});
