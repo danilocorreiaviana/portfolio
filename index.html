@@ -11,6 +11,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
 
   <title>Danilo Correia</title>
 </head>
@@ -320,23 +322,40 @@
           <a href="https://wa.me/5588988183118" target="_blank"> <i class="fa fa-whatsapp"></i></a>
         </div>
 
-        <form>
+        <form id="contact-form">
           <div class="form-group">
             <label class="lead" for="nome" class="col-form-label text-left">Nome:</label>
-            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+            <input type="text" class="form-control" id="name" placeholder="Digite seu nome" required>
           </div>
           <div class="form-group">
             <label class="lead" for="email" class="col-form-label text-left">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+            <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
           </div>
           <div class="form-group">
             <label class="lead" for="mensagem" class="col-form-label text-left">Mensagem:</label>
-            <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua mensagem"></textarea>
+            <textarea class="form-control" id="message" rows="3" placeholder="Digite sua mensagem" required></textarea>
           </div>
           <div class="text-center">
             <button type="submit" class="btn">Enviar</button>
           </div>
         </form>
+
+        <!-- Modal de sucesso -->
+        <div class="modal fade" id="success-modal" tabindex="-1" aria-labelledby="success-modal-label"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="success-modal-label">Mensagem Enviada</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="success-text">Sua mensagem foi enviada com sucesso!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -344,7 +363,7 @@
     <div class="modal fade center" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-dark">
             <h5 class="modal-title" id="modalTitle"></h5>
             <img id="modalImage" src="" alt="Logo" class="mr-2">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -353,7 +372,7 @@
             <p id="modalContent"></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn" data-bs-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
