@@ -542,7 +542,7 @@ form .text-center button:hover {
   align-items: center;
   font-size: 24px;
   text-decoration: none;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .floating-button i {
@@ -564,8 +564,13 @@ form .text-center button:hover {
   align-items: center;
 }
 
+.message-count--positive {
+  background-color: #2441c5;
+}
+
+
 #success-modal .modal-header {
-  background-color: #4CAF50;
+  background-color: #226e25;
   color: #fff;
   border-bottom: none;
 }
@@ -601,27 +606,27 @@ form .text-center button:hover {
   margin-left: 5px;
 }
 
-#myModal .modal-header{
+#myModal .modal-header {
   color: #fff;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: none; 
+  border: none;
 }
 
-#myModal .modal-header .btn-close{
+#myModal .modal-header .btn-close {
   background-color: #924545;
 }
 
-#myModal .modal-body{
+#myModal .modal-body {
   background-color: #c3d9e2;
 }
 
-#myModal .modal-footer{
+#myModal .modal-footer {
   background-color: #333;
   color: #fff
 }
 
-#myModal .modal-footer button{
+#myModal .modal-footer button {
   background-color: #924545;
   color: #fff
 }
