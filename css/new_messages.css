@@ -1,0 +1,125 @@
+html,
+body {
+    height: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    color: #fff !important;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* BARRA DE ROLAGEM */
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: gray;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #4c4c9c;
+    border-radius: 20px;
+    border: 3px solid #4c4c9c;
+}
+
+/* MENU NAVBAR */
+
+.navbar {
+    background-color: #161618;
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: #25afe6;
+}
+
+.navbar-toggler>.close {
+    display: inline;
+}
+
+.navbar-toggler.collapsed>.close,
+.navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display: none;
+}
+
+.logo {
+    font-size: 25px !important;
+}
+
+.logo i {
+    margin-left: 10px !important;
+}
+
+.button-links {
+    border: 1px solid #fff !important;
+    border-radius: 5px !important;
+    margin: 8px !important;
+    text-align: center !important;
+}
+
+.button-links:hover {
+    background-color: #646464
+}
+
+@media (max-width: 280px) {
+
+    .logo {
+        font-size: 20px !important;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+.container-list {
+    margin-top: 160px;
+}
+
+
+#message-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.message-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: red;
+    cursor: pointer;
+}
+
+/* RODAPÉ */
+
+.icons-contact-footer a {
+    font-size: 25px;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #161618;
+    text-align: center;
+}
