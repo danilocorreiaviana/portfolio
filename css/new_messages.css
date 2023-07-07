@@ -17,6 +17,10 @@ body {
     -ms-user-select: none;
 }
 
+.button-padding {
+    padding: 30px;
+}
+
 /* BARRA DE ROLAGEM */
 
 body::-webkit-scrollbar {
