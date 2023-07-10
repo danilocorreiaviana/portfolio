@@ -114,6 +114,35 @@ h1 {
     cursor: pointer;
 }
 
+.modal-header {
+    background-color: #226e25;
+    color: #fff;
+    border-bottom: none;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-dialog {
+    max-width: 400px;
+}
+
+.modal-text {
+    font-size: 16px;
+    color: #000;
+}
+
+/* Estilo para o botão de fechar o modal */
+.btn-close {
+    font-size: 15px;
+}
+
 /* RODAPÉ */
 
 .icons-contact-footer a {

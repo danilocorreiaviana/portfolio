@@ -12,13 +12,40 @@ function getMessages() {
 
 // Função para limpar todas as mensagens
 function clearMessages() {
-    localStorage.removeItem('contactMessages');
+    var messages = localStorage.getItem('contactMessages');
+    var alertMessagesHeader = document.getElementById('modal-header');
+    var alertMessagesTitle = document.getElementById('modal-title');
+    var alertMessagesText = document.getElementById('modal-text');
+    if (messages) {
+        alertMessagesTitle.innerHTML = "Mensagens Deletadas";
+        alertMessagesText.innerHTML = "Todas as mensagens foram deletadas com sucesso!"
+        localStorage.removeItem('contactMessages');
+    } else {
+        alertMessagesHeader.style.backgroundColor = "#EEAD2D"
+        alertMessagesTitle.innerHTML = "Nenhuma Mensagem";
+        alertMessagesText.innerHTML = "Não há mensagem para deletar!"
+    }
+    $('#modal-alert').modal('show');
     displayMessages();
+
 }
 
 document.getElementById('clear-messages').addEventListener('click', function () {
     clearMessages();
 });
+
+// Função para deletar uma mensagem
+function deleteMessage(index) {
+    var messages = getMessages();
+    var alertMessagesTitle = document.getElementById('modal-title');
+    var alertMessagesText = document.getElementById('modal-text');
+    messages.splice(index, 1);
+    localStorage.setItem('contactMessages', JSON.stringify(messages));
+    alertMessagesTitle.innerHTML = "Mensagem Deletada";
+    alertMessagesText.innerHTML = "Mensagem deletada com sucesso!"
+    $('#modal-alert').modal('show');
+    displayMessages();
+}
 
 // Função para exibir as mensagens
 function displayMessages() {
@@ -41,6 +68,7 @@ function displayMessages() {
               <strong>Nome:</strong> ${message.name}<br>
               <strong>E-mail:</strong> ${message.email}<br>
               <strong>Mensagem:</strong> ${message.message}
+              <i class="fas fa-trash delete-button" onclick="deleteMessage(${index})"></i>
             `;
             messageList.appendChild(messageItem);
         });
@@ -49,3 +77,11 @@ function displayMessages() {
 
 // Exibir as mensagens ao carregar a página
 displayMessages();
+
+
+//Tentativa de recarregar a página em todos os navegadores quando retornar pelo botão de voltar
+window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+        location.reload();
+    }
+});
