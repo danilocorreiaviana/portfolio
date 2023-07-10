@@ -12,27 +12,15 @@ function getMessages() {
 
 // Função para limpar todas as mensagens
 function clearMessages() {
-    var messages = localStorage.getItem('contactMessages');
-    var alertMessagesHeader = document.getElementById('modal-header');
     var alertMessagesTitle = document.getElementById('modal-title');
     var alertMessagesText = document.getElementById('modal-text');
-    if (messages) {
-        alertMessagesTitle.innerHTML = "Mensagens Deletadas";
-        alertMessagesText.innerHTML = "Todas as mensagens foram deletadas com sucesso!"
-        localStorage.removeItem('contactMessages');
-    } else {
-        alertMessagesHeader.style.backgroundColor = "#EEAD2D"
-        alertMessagesTitle.innerHTML = "Nenhuma Mensagem";
-        alertMessagesText.innerHTML = "Não há mensagem para deletar!"
-    }
+    alertMessagesTitle.innerHTML = "Mensagens Deletadas";
+    alertMessagesText.innerHTML = "Todas as mensagens foram deletadas com sucesso!"
+    localStorage.removeItem('contactMessages')
     $('#modal-alert').modal('show');
     displayMessages();
 
 }
-
-document.getElementById('clear-messages').addEventListener('click', function () {
-    clearMessages();
-});
 
 // Função para deletar uma mensagem
 function deleteMessage(index) {
@@ -45,6 +33,7 @@ function deleteMessage(index) {
     alertMessagesText.innerHTML = "Mensagem deletada com sucesso!"
     $('#modal-alert').modal('show');
     displayMessages();
+
 }
 
 // Função para exibir as mensagens
@@ -74,6 +63,22 @@ function displayMessages() {
         });
     }
 }
+
+//Evento de clicar no botão de limpar mensagens
+document.getElementById('clear-messages').addEventListener('click', function () {
+    var messages = getMessages();
+    if (messages.length > 0) {
+        clearMessages();
+    } else {
+        var alertMessagesHeader = document.getElementById('modal-header');
+        var alertMessagesTitle = document.getElementById('modal-title');
+        var alertMessagesText = document.getElementById('modal-text');
+        alertMessagesHeader.style.backgroundColor = "#EEAD2D"
+        alertMessagesTitle.innerHTML = "Nenhuma Mensagem";
+        alertMessagesText.innerHTML = "Não há mensagem para deletar!"
+        $('#modal-alert').modal('show');
+    }
+});
 
 // Exibir as mensagens ao carregar a página
 displayMessages();
