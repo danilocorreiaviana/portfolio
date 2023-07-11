@@ -15,8 +15,8 @@ function clearMessages() {
     var alertMessagesTitle = document.getElementById('modal-title');
     var alertMessagesText = document.getElementById('modal-text');
     alertMessagesTitle.innerHTML = "Mensagens Deletadas";
-    alertMessagesText.innerHTML = "Todas as mensagens foram deletadas com sucesso!"
-    localStorage.removeItem('contactMessages')
+    alertMessagesText.innerHTML = "Todas as mensagens foram deletadas com sucesso!";
+    localStorage.removeItem('contactMessages');
     $('#modal-alert').modal('show');
     displayMessages();
 
@@ -30,7 +30,7 @@ function deleteMessage(index) {
     messages.splice(index, 1);
     localStorage.setItem('contactMessages', JSON.stringify(messages));
     alertMessagesTitle.innerHTML = "Mensagem Deletada";
-    alertMessagesText.innerHTML = "Mensagem deletada com sucesso!"
+    alertMessagesText.innerHTML = "Mensagem deletada com sucesso!";
     $('#modal-alert').modal('show');
     displayMessages();
 
@@ -39,17 +39,25 @@ function deleteMessage(index) {
 // Função para exibir as mensagens
 function displayMessages() {
     var messages = getMessages();
-
+    var clearMessages = document.getElementById('clear-messages-button');
     var messageList = document.getElementById('message-list');
     messageList.innerHTML = '';
 
     if (messages.length === 0) {
+        clearMessages.style.display = "none";
         var noMessagesItem = document.createElement('li');
+        var noMessagesImg = document.createElement('li');
         noMessagesItem.innerText = 'Nenhuma mensagem recebida.';
-        noMessagesItem.style.textAlign = "center"
-        noMessagesItem.classList.add("lead")
+        noMessagesImg.innerHTML = '<i class="fas fa-comment-slash"></i>';
+        noMessagesItem.classList.add("lead");
+        noMessagesImg.style.fontSize = "50px";
+        messageList.appendChild(noMessagesImg);
         messageList.appendChild(noMessagesItem);
+        messageList.style.textAlign = "center";
+        messageList.style.color = "skyblue";
+
     } else {
+        clearMessages.style.display = "block";
         messages.forEach(function (message, index) {
             var messageItem = document.createElement('li');
             messageItem.classList.add('message-item');
@@ -66,27 +74,8 @@ function displayMessages() {
 
 //Evento de clicar no botão de limpar mensagens
 document.getElementById('clear-messages').addEventListener('click', function () {
-    var messages = getMessages();
-    if (messages.length > 0) {
-        clearMessages();
-    } else {
-        var alertMessagesHeader = document.getElementById('modal-header');
-        var alertMessagesTitle = document.getElementById('modal-title');
-        var alertMessagesText = document.getElementById('modal-text');
-        alertMessagesHeader.style.backgroundColor = "#EEAD2D"
-        alertMessagesTitle.innerHTML = "Nenhuma Mensagem";
-        alertMessagesText.innerHTML = "Não há mensagem para deletar!"
-        $('#modal-alert').modal('show');
-    }
+    clearMessages();
 });
 
 // Exibir as mensagens ao carregar a página
 displayMessages();
-
-
-//Tentativa de recarregar a página em todos os navegadores quando retornar pelo botão de voltar
-window.addEventListener('pageshow', function (event) {
-    if (event.persisted) {
-        location.reload();
-    }
-});
