@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Danilo Correia - Desenvolvedor Front-End">
+  <meta name="theme-color" content="#0a0a1a">
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="icon" type="image/ico" href="./favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Danilo Correia | Desenvolvedor Front-End</title>
+</head>
+
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a class="logo" href="#home">Danilo Correia</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Início</a></li>
+        <li><a href="#about" class="nav-link">Formação</a></li>
+        <li><a href="#acting" class="nav-link">Atuação</a></li>
+        <li><a href="#projects" class="nav-link">Projetos</a></li>
+        <li><a href="#contact" class="nav-link">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-glow"></div>
+          <img src="./assets/images/photos/profile.png" draggable="false" alt="Danilo Correia" class="hero-image">
+        </div>
+        <h1 class="hero-title">Danilo Correia</h1>
+        <p class="hero-subtitle" id="typewriter"></p>
+        <div class="hero-social">
+          <a href="https://github.com/danilocorreiaviana" target="_blank" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/danilo-correia-viana-3118a921a/" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:danilocorreiaviana14@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div class="scroll-indicator">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">Formação</h2>
+        <div class="slider-container">
+          <div class="slider" ontouchstart="handleTouchStart(event)" ontouchend="handleTouchEnd(event)">
+            <div class="slide active">
+              <div class="slide-content">
+                <h3>Sobre mim</h3>
+                <div class="slide-body">
+                  <img src="./assets/images/photos/profile2.jpeg" draggable="false" alt="Sobre mim">
+                  <p>Meu nome é <strong>Danilo Correia Viana</strong>, tenho <strong>25 anos</strong> e sou
+                    <strong>bacharel em Sistemas de Informação</strong> pelo Instituto Federal do Ceará (IFCE) – Campus
+                    Crato.</p>
+                  <p>Nasci e sempre morei em Juazeiro do Norte – CE. Desde criança, sempre fui apaixonado por
+                    tecnologia, tanto na área de hardware quanto de software.</p>
+                  <p>Atualmente, atuo no desenvolvimento de software e continuo aprimorando meus conhecimentos em
+                    desenvolvimento web, APIs, arquitetura de sistemas, e boas práticas de engenharia de software,
+                    buscando sempre criar soluções eficientes, seguras e escaláveis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <h3>Ensino Médio</h3>
+                <div class="slide-body">
+                  <img src="./assets/images/photos/highschool.jpg" draggable="false" alt="Ensino Médio">
+                  <p>Estudei no Colégio Objetivo de Juazeiro do Norte — CE. Durante os 3 anos do meu Ensino Médio,
+                    despertei o meu interesse pela programação. Participei de diversas olimpíadas como OBI (onde
+                    desenvolvi habilidades de programação em Java, Python e C) e OBR (onde desenvolvi habilidades com
+                    Arduino e Lego). Em 2017, participei de várias feiras científicas apresentando o projeto
+                    <strong>Braille Messenger</strong>, de autoria minha e do meu colega Heitor Souza com orientação de
+                    Jayr Alencar, cujo objetivo é o desenvolvimento de um aplicativo para celulares capaz de
+                    proporcionar a troca de mensagens instantâneas entre pessoas cegas ou com baixa visão, incentivando,
+                    assim, a inclusão digital.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <h3>Faculdade</h3>
+                <div class="slide-body">
+                  <img src="./assets/images/photos/profile3.jpg" draggable="false" alt="Faculdade">
+                  <p>Quando decidi ingressar na faculdade, minha primeira opção era o curso de Ciência da Computação na
+                    UFCA. No entanto, iniciei minha trajetória em Sistemas de Informação no IFCE – Campus Crato e logo
+                    me identifiquei com a área.</p>
+                  <p>Durante a graduação, consolidei minha base em desenvolvimento de software, engenharia de software,
+                    banco de dados, redes de computadores e arquitetura de sistemas. Além disso, participei de
+                    hackathons e maratonas de programação, experiências que fortaleceram minhas habilidades de trabalho
+                    em equipe, resolução de problemas e desenvolvimento de soluções inovadoras.</p>
+                  <p>Hoje, formado e bacharel em Sistemas de Informação, sigo em constante evolução como desenvolvedor
+                    de software, aprimorando meus conhecimentos em desenvolvimento back-end, front-end, APIs e
+                    tecnologias modernas para criar aplicações seguras, escaláveis e de alta qualidade.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav">
+            <button onclick="goToSlide(0)" class="active" aria-label="Slide 1"></button>
+            <button onclick="goToSlide(1)" aria-label="Slide 2"></button>
+            <button onclick="goToSlide(2)" aria-label="Slide 3"></button>
+          </div>
+          <button class="slider-arrow prev" onclick="prevSlide()" aria-label="Anterior">&#10094;</button>
+          <button class="slider-arrow next" onclick="nextSlide()" aria-label="Próximo">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="acting" class="section">
+      <div class="container">
+        <h2 class="section-title">Atuação</h2>
+        <div class="acting-card glass">
+          <div class="acting-header">
+            <h3>Estagiário da DTI</h3>
+            <h4>Universidade Federal do Cariri — UFCA</h4>
+            <span class="acting-date">05/2021 — 12/2021</span>
+          </div>
+          <div class="acting-body">
+            <div class="acting-text">
+              <p>Estagiei na UFCA — Campus Juazeiro do Norte realizando as seguintes atividades:</p>
+              <ul>
+                <li>Criação e manutenção de funcionalidades de sistemas de informação</li>
+                <li>Participação na implementação de relatórios</li>
+                <li>Criação de consultas para extração de dados de sistemas</li>
+                <li>Atendimento de demandas de operação dos sistemas da UFCA</li>
+                <li>Criação de manuais dos sistemas gerenciados</li>
+              </ul>
+            </div>
+            <div class="acting-logos">
+              <a href="https://www.ufca.edu.br" target="_blank">
+                <img src="./assets/images/logos/brasao.png" alt="Brasão UFCA">
+                <img src="./assets/images/logos/ufca_logo2.png" alt="Logo UFCA">
+              </a>
+            </div>
+          </div>
+          <div class="acting-techs" style="display: none;">
+            <span>Tecnologias:</span>
+            <a href="https://eclipseide.org" target="_blank"><img src="./assets/images/logos/eclipse_logo.png"
+                alt="Eclipse"></a>
+            <a href="https://www.java.com/pt-BR/" target="_blank"><img src="./assets/images/logos/java_logo.png"
+                alt="Java"></a>
+          </div>
+        </div>
+
+        <div class="acting-card glass" style="margin-top: 32px;">
+          <div class="acting-header">
+            <h3>Residente Front-End</h3>
+            <h4>iUUL</h4>
+            <span class="acting-date">05/07/2023 — 05/04/2024</span>
+          </div>
+          <div class="acting-body">
+            <div class="acting-text">
+              <p>No período de residência pude participar de um projeto real no contexto de um software de reformas chamado <a href="https://www.pro-reforma.com/" target="_blank">pro-reforma</a>. Neste projeto, executei tarefas relacionadas ao desenvolvimento de software utilizando o framework Angular. Durante a residência, tive contato prático com metodologias ágeis. Além disso, a residência me proporcionou criar um portfólio pessoal utilizando as tecnologias HTML, CSS e Javascript e um aplicativo de conversão de moedas utilizando o framework Angular.</p>
+            </div>
+            <div class="acting-logos">
+              <a href="https://iuul.com.br" target="_blank">
+                <img src="./assets/images/logos/Logo_IUUL_Rosa.png" alt="Logo iUUL" style="max-width: 180px;">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="acting-card glass" style="margin-top: 32px;">
+          <div class="acting-header">
+            <h3>Assistente de TI</h3>
+            <h4>ED — Soluções Tecnológicas</h4>
+            <span class="acting-date">04/03/2024 — Atualmente</span>
+          </div>
+          <div class="acting-body">
+            <div class="acting-text">
+              <p>Atuo no desenvolvimento e manutenção de sistemas sob demanda para diferentes projetos. Implementação de melhorias e novas funcionalidades em sistemas existentes.</p>
+            </div>
+            <div class="acting-logos">
+              <a href="https://ed.dev.br" target="_blank">
+                <img src="./assets/images/logos/logo-ed.png" alt="Logo ED Soluções Tecnológicas" style="max-width: 180px;">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projetos</h2>
+        <p class="section-subtitle" style="display: none;">Projetos reais desenvolvidos com <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a></p>
+        <div class="projects-grid">
+          <div class="project-card glass">
+            <div class="project-media">
+              <video draggable="false" poster="./assets/images/poster/poster1.png" autoplay loop muted>
+                <source src="./assets/videos/reactfilmes.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="project-info">
+              <h3>React Filmes</h3>
+              <p>Site para buscar filmes utilizando a API <a
+                  href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">TMDB</a>.</p>
+              <div class="project-tags">
+                <span class="tag" data-tech="react">React JS</span>
+                <span class="tag" data-tech="css">CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/danilocorreiaviana/ReactJSFilme" target="_blank" class="btn-icon"
+                  aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://react-js-filmes.vercel.app" target="_blank" class="btn-icon" aria-label="Site"><i
+                    class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card glass">
+            <div class="project-media">
+              <video draggable="false" poster="./assets/images/poster/poster2.png" autoplay loop muted>
+                <source src="./assets/videos/studygroup.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="project-info">
+              <h3>Grupo de Estudos</h3>
+              <p>Plataforma onde estudantes podem criar grupos, anexar materiais e buscar por grupos existentes.</p>
+              <div class="project-tags">
+                <span class="tag" data-tech="react">React JS</span>
+                <span class="tag" data-tech="css">CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/danilocorreiaviana/front_grupo_de_estudos" target="_blank" class="btn-icon"
+                  aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://grupo-de-estudos.vercel.app" target="_blank" class="btn-icon" aria-label="Site"><i
+                    class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card glass">
+            <div class="project-media">
+              <video draggable="false" poster="./assets/images/poster/poster3.png" autoplay loop muted>
+                <source src="./assets/videos/danielfreestyle.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="project-info">
+              <h3>Daniel Freestyle</h3>
+              <p>Portfólio profissional para o atleta de futebol freestyler Daniel Correia.</p>
+              <div class="project-tags">
+                <span class="tag" data-tech="react">React JS</span>
+                <span class="tag" data-tech="css">CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/danilocorreiaviana/portfolio-freestyler-danielcorreia" target="_blank"
+                  class="btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://danielcorreia43.vercel.app" target="_blank" class="btn-icon" aria-label="Site"><i
+                    class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card glass">
+            <div class="project-media">
+              <img src="./assets/images/poster/poster4.png" alt="Conversor de Moedas" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div class="project-info">
+              <h3>Conversor de Moedas</h3>
+              <p>Aplicativo de conversão de moedas desenvolvido com Angular, consumindo API de taxas de câmbio.</p>
+              <div class="project-tags">
+                <span class="tag" data-tech="angular">Angular</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/danilocorreiaviana/conversor-de-moedas" target="_blank" class="btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://conversor-de-moedas-angular.vercel.app/coin-list" target="_blank" class="btn-icon" aria-label="Site"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <div class="contact-content">
+          <div class="contact-social">
+            <a href="https://github.com/danilocorreiaviana" target="_blank" aria-label="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/danilo-correia-viana-3118a921a/" target="_blank"
+              aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:danilocorreiaviana14@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+            <a href="https://wa.me/5588988183118" target="_blank" aria-label="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
+          </div>
+          <form class="contact-form glass" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="2fa95fd3-d13f-4ffd-b1c5-471510dcb55a">
+            <input type="hidden" name="subject" value="Novo contato do Portfolio">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea name="mensagem" id="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Danilo Correia. Todos os direitos reservados.</p>
+      <div class="footer-social">
+        <a href="https://github.com/danilocorreiaviana" target="_blank" aria-label="GitHub"><i
+            class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/danilo-correia-viana-3118a921a/" target="_blank" aria-label="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/5588988183118" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="techModal">
+    <div class="modal-content glass">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
+      <img id="modalImage" src="" alt="">
+      <h3 id="modalTitle"></h3>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
